@@ -1,0 +1,19 @@
+html {
+    /* footer support */
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--font);
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    /* footer support */
+    margin-bottom: 100px;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+}

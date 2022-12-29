@@ -1,6 +1,6 @@
 "use strict";
 
-// main operators
+//operators
 
 function add(a, b) {
     return a + b;
@@ -38,4 +38,4 @@ function operate(operator, firstNumber, secondNumber) {
     }
 }
 
-operate("-", 3, 3);
+operate("/", 9, 3);
