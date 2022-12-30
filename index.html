@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <title>Calculator</title>
 </head>
 
@@ -14,43 +14,43 @@
     <div id="main-container">
         <div id="calculator-container">
             <div id="display-container">
-                <div class="calculations-display"></div>
+                <div id="calculations-display"></div>
                 123456
             </div>
             <div id="buttons-container">
                 <div id="numbers-container">
                     <div class="numbers-row1">
-                        <button type="button">7</button>
-                        <button type="button">8</button>
-                        <button type="button">9</button>
+                        <button class="btn" data-number>7</button>
+                        <button class="btn" data-number>8</button>
+                        <button class="btn" data-number>9</button>
                     </div>
 
                     <div class="numbers-row2">
-                        <button type="button">4</button>
-                        <button type="button">5</button>
-                        <button type="button">6</button>
+                        <button class="btn" data-number>4</button>
+                        <button class="btn" data-number>5</button>
+                        <button class="btn" data-number>6</button>
                     </div>
                     <div class="numbers-row3">
-                        <button type="button">1</button>
-                        <button type="button">2</button>
-                        <button type="button">3</button>
+                        <button class="btn" data-number>1</button>
+                        <button class="btn" data-number>2</button>
+                        <button class="btn" data-number>3</button>
                     </div>
                     <div class="numbers-row4">
-                        <button type="button">0</button>
-                        <button type="button">.</button>
-                        <button type="button-bigger">delete</button>
+                        <button class="btn" data-number>0</button>
+                        <button class="btn" id="dot">.</button>
+                        <button class="btn" id="button-delete-bigger">delete</button>
                     </div>
                 </div>
                 <div id="operators-container">
                     <div class="operators-top">
-                        <button type="button-bigger">CLEAR</button>
-                        <button type="button">*</button>
-                        <button type="button">/</button>
+                        <button class="btn" id="button-clear-bigger">clear</button>
+                        <button class="btn" data-operator>*</button>
+                        <button class="btn" data-operator>/</button>
                     </div>
                     <div class="operators-bottom">
-                        <button type="button">+</button>
-                        <button type="button">-</button>
-                        <button type="button">=</button>
+                        <button class="btn" data-operator>+</button>
+                        <button class="btn" data-operator>-</button>
+                        <button class="btn" id="button-equal">=</button>
                     </div>
                 </div>
             </div>

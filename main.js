@@ -1,5 +1,17 @@
 "use strict";
 
+//Selecting elements
+
+const numberButtons = document.querySelectorAll("[data-number]");
+const operatorButtons = document.querySelectorAll("[data-operator]");
+const dotButton = document.getElementById("dot");
+const deleteButton = document.getElementById("button-delete-bigger");
+const clearButton = document.getElementById("button-delete-bigger");
+const equalButton = document.getElementById("button-equal");
+const display = document.getElementById("calculations-display");
+
+//clearButton.addEventListener("click", () => {});
+console.log(display.textContent);
 //operators
 
 function add(a, b) {
@@ -24,18 +36,17 @@ function operate(operator, firstNumber, secondNumber) {
     let result;
     switch (operator) {
         case "+":
-            result = console.log(add(firstNumber, secondNumber));
+            result = add(firstNumber, secondNumber);
             break;
         case "-":
-            result = console.log(subtract(firstNumber, secondNumber));
+            result = subtract(firstNumber, secondNumber);
             break;
         case "*":
-            result = console.log(multiply(firstNumber, secondNumber));
+            result = multiply(firstNumber, secondNumber);
             break;
         case "/":
-            result = console.log(divide(firstNumber, secondNumber));
+            result = divide(firstNumber, secondNumber);
             break;
     }
+    return result;
 }
-
-operate("/", 9, 3);
