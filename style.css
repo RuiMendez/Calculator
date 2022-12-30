@@ -8,3 +8,7 @@ body {
     align-items: center;
     height: 38em;
 }
+
+#display-container {
+    border: solid black;
+}

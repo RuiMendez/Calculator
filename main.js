@@ -8,13 +8,28 @@ const dotButton = document.getElementById("dot");
 const deleteButton = document.getElementById("button-delete-bigger");
 const clearButton = document.getElementById("button-clear-bigger");
 const equalButton = document.getElementById("button-equal");
-const display = document.querySelector(".calculations-display");
-
+let display = document.querySelector(".calculations-display");
+//
+let displayValue = 0;
+display.innerHTML += displayValue;
+//
+//clear
 clearButton.addEventListener("click", () => {
     console.log(display.textContent);
 
     display.textContent = 0;
 });
+//
+numberButtons.forEach((btn) => {
+    addEventListener("click", () => {
+        console.log("teste");
+        upddateDisplay();
+    });
+});
+
+function upddateDisplay() {
+    displayValue = numberButtons.innerHTML;
+}
 //operators
 
 function add(a, b) {
