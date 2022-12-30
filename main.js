@@ -6,12 +6,15 @@ const numberButtons = document.querySelectorAll("[data-number]");
 const operatorButtons = document.querySelectorAll("[data-operator]");
 const dotButton = document.getElementById("dot");
 const deleteButton = document.getElementById("button-delete-bigger");
-const clearButton = document.getElementById("button-delete-bigger");
+const clearButton = document.getElementById("button-clear-bigger");
 const equalButton = document.getElementById("button-equal");
-const display = document.getElementById("calculations-display");
+const display = document.querySelector(".calculations-display");
 
-//clearButton.addEventListener("click", () => {});
-console.log(display.textContent);
+clearButton.addEventListener("click", () => {
+    console.log(display.textContent);
+
+    display.textContent = 0;
+});
 //operators
 
 function add(a, b) {
