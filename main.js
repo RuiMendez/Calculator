@@ -13,6 +13,7 @@ let display = document.querySelector(".calculations-display");
 function initialDisplay() {
     return (display.innerHTML = "0");
 }
+let calculationsArray = [];
 
 //populate display with numbers
 for (let i = 0; i < numberButtons.length; i++) {
@@ -22,6 +23,9 @@ for (let i = 0; i < numberButtons.length; i++) {
             display.innerHTML = "";
         }
         display.innerHTML += button.innerHTML;
+        const inputNumbers = Number(display.innerHTML);
+        calculationsArray.push(inputNumbers);
+        calculationsArray.splice(0, calculationsArray.length - 1);
     });
 }
 
@@ -50,7 +54,6 @@ function divide(a, b) {
 }
 //
 //main operator function
-
 function operate(operator, firstNumber, secondNumber) {
     let result;
     switch (operator) {
@@ -69,5 +72,4 @@ function operate(operator, firstNumber, secondNumber) {
     }
     return result;
 }
-
 initialDisplay();
