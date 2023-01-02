@@ -13,7 +13,7 @@ let display = document.querySelector(".calculations-display");
 function initialDisplay() {
     return (display.innerHTML = "0");
 }
-let calculationsArray = [];
+let opperandOneArray = [];
 
 //populate display with numbers
 for (let i = 0; i < numberButtons.length; i++) {
@@ -23,12 +23,15 @@ for (let i = 0; i < numberButtons.length; i++) {
             display.innerHTML = "";
         }
         display.innerHTML += button.innerHTML;
-        const inputNumbers = Number(display.innerHTML);
-        calculationsArray.push(inputNumbers);
-        calculationsArray.splice(0, calculationsArray.length - 1);
+        addOpperandOne();
     });
 }
 
+function addOpperandOne() {
+    const inputNumbers = Number(display.innerHTML);
+    opperandOneArray.push(inputNumbers);
+    opperandOneArray.splice(0, opperandOneArray.length - 1);
+}
 //clear display
 clearButton.addEventListener("click", () => {
     initialDisplay();
