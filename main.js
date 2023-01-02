@@ -2,7 +2,7 @@
 
 //Selecting elements
 
-const numberButtons = document.querySelectorAll("[data-number]");
+let numberButtons = document.querySelectorAll(".btn");
 const operatorButtons = document.querySelectorAll("[data-operator]");
 const dotButton = document.getElementById("dot");
 const deleteButton = document.getElementById("button-delete-bigger");
@@ -10,26 +10,25 @@ const clearButton = document.getElementById("button-clear-bigger");
 const equalButton = document.getElementById("button-equal");
 let display = document.querySelector(".calculations-display");
 //
-let displayValue = 0;
-display.innerHTML += displayValue;
-//
-//clear
+display.innerHTML = "0";
+
+//populate display with numbers
+for (let i = 0; i < numberButtons.length; i++) {
+    let button = numberButtons[i];
+    button.addEventListener("click", () => {
+        if (display.innerHTML === "0") {
+            display.innerHTML = "";
+        }
+        display.innerHTML += button.innerHTML;
+    });
+}
+
+//clear display
 clearButton.addEventListener("click", () => {
     console.log(display.textContent);
-
-    display.textContent = 0;
 });
 //
-numberButtons.forEach((btn) => {
-    addEventListener("click", () => {
-        console.log("teste");
-        upddateDisplay();
-    });
-});
 
-function upddateDisplay() {
-    displayValue = numberButtons.innerHTML;
-}
 //operators
 
 function add(a, b) {
