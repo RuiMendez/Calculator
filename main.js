@@ -10,7 +10,9 @@ const clearButton = document.getElementById("button-clear-bigger");
 const equalButton = document.getElementById("button-equal");
 let display = document.querySelector(".calculations-display");
 //
-display.innerHTML = "0";
+function initialDisplay() {
+    return (display.innerHTML = "0");
+}
 
 //populate display with numbers
 for (let i = 0; i < numberButtons.length; i++) {
@@ -25,7 +27,7 @@ for (let i = 0; i < numberButtons.length; i++) {
 
 //clear display
 clearButton.addEventListener("click", () => {
-    console.log(display.textContent);
+    initialDisplay();
 });
 //
 
@@ -67,3 +69,5 @@ function operate(operator, firstNumber, secondNumber) {
     }
     return result;
 }
+
+initialDisplay();
