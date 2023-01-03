@@ -15,7 +15,7 @@ function initialDisplay() {
 }
 let opperandOneArray = [];
 
-//populate display with numbers
+//populate display with first operand numbers
 for (let i = 0; i < numberButtons.length; i++) {
     let button = numberButtons[i];
     button.addEventListener("click", () => {
